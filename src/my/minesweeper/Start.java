@@ -134,6 +134,7 @@ public class Start extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(204, 255, 204));
         jButton3.setForeground(new java.awt.Color(0, 102, 51));
         jButton3.setText("Play");
+        jButton3.setAutoscrolls(true);
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +190,7 @@ public class Start extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -206,7 +207,6 @@ public class Start extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Instruction howTo = new Instruction();
         howTo.setVisible(true);
-        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

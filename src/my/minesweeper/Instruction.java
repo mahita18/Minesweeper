@@ -56,7 +56,7 @@ public class Instruction extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Enter a coordinate to uncover a tile.\nThere are two types of tiles; normal and bad.\n\nIf you uncover a normal tile, it will reveal how many bad tiles are surrounding it.\nIf you uncover a bad tile, you will lose!\n\nWin the game by uncovering ALL the normal tiles!\nA counter will be present to tell you how many remain.");
+        jTextArea1.setText("Enter a coordinate to uncover a tile.\nThere are two types of tiles; normal and bad.\n\nIf you uncover a normal tile, it will reveal how many bad tiles are surrounding it.\nIf you uncover a bad tile, you will lose!\n\nWin the game by uncovering ALL the normal tiles!");
         jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -82,8 +82,8 @@ public class Instruction extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
-                .addGap(22, 22, 22)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -109,8 +109,6 @@ public class Instruction extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Start begin = new Start();
-        begin.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
