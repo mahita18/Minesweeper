@@ -11,7 +11,7 @@ import java.awt.event.*;
  *
  * @author mahit
  */
-public class Tile {
+public class Tile{
     int nearbyMines;
     JButton button;
     String type;
