@@ -4,15 +4,24 @@
  */
 package my.minesweeper;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author mahit
  */
 public class Tile {
     int nearbyMines;
+    JButton button;
     
     public Tile(){
         nearbyMines=0;
+        button = new JButton(" ? ");
+        
+    }
+    
+    public JButton button(){
+        return button;
     }
     
     public void addNearbyMine(){

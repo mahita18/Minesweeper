@@ -4,7 +4,7 @@
  */
 package my.minesweeper;
 
-import javax.swing.JButton;
+
 /**
  *
  * @author mahit
@@ -15,7 +15,9 @@ public class Play extends javax.swing.JFrame {
      * Creates new form Play
      */
     
-    JButton[][] buttonGrid = new JButton[6][6];
+    Tile[][] tileGrid = new Tile[6][6];
+    
+    
    
     //tile not button
     public Play() {
@@ -23,9 +25,14 @@ public class Play extends javax.swing.JFrame {
         
         for (int x=0; x<6; x++){
             for(int y=0; y<6; y++){
-                JButton tile = new JButton(" ? ");
-                jPanel2.add(tile);
-                buttonGrid[x][y] = (tile);
+                Tile point = new Tile();                      
+                tileGrid[x][y] = point;
+            }
+        }
+        
+        for (int a=0; a<6; a++){
+            for(int b=0; b<6; b++){
+                jPanel2.add(tileGrid[a][b].button());
             }
         }
         
