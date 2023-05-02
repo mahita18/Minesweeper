@@ -27,16 +27,10 @@ public class Play extends javax.swing.JFrame {
             for(int y=0; y<6; y++){
                 Tile point = new Tile();                      
                 tileGrid[x][y] = point;
+                jPanel2.add(tileGrid[x][y].button());
             }
         }
-        
-        for (int a=0; a<6; a++){
-            for(int b=0; b<6; b++){
-                jPanel2.add(tileGrid[a][b].button());
-            }
-        }
-        
-        
+               
     }
 
     /**
