@@ -15,8 +15,10 @@ public class Tile{
     int nearbyMines;
     JButton button;
     boolean mine;
+    Play frame;
     
-    public Tile(){
+    public Tile(Play window){
+        frame = window;
         nearbyMines=0;
         button = new JButton();
         mine = false;
@@ -25,8 +27,10 @@ public class Tile{
     public JButton button(){
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                if (mine)
-                    button.setText("X");
+                if (mine){
+                    
+                    frame.dispose();
+                }
                 else
                     button.setText(Integer.toString(nearbyMines));
             }
