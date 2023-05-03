@@ -14,21 +14,21 @@ import java.awt.event.*;
 public class Tile{
     int nearbyMines;
     JButton button;
-    String type;
+    boolean mine;
     
     public Tile(){
         nearbyMines=0;
-        button = new JButton(" ? ");
-        type = "normal";
+        button = new JButton();
+        mine = false;
     }
      
     public JButton button(){
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                if (type.equals("normal"))
-                    button.setText(Integer.toString(nearbyMines));
+                if (mine)
+                    button.setText("X");
                 else
-                    button.setText("!");
+                    button.setText(Integer.toString(nearbyMines));
             }
         });
         return button;
@@ -36,6 +36,11 @@ public class Tile{
     
     public void addNearbyMine(){
         nearbyMines++;
+    }
+    
+    public void setType(){
+        
+        mine = true;
     }
     
 }

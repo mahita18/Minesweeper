@@ -4,6 +4,8 @@
  */
 package my.minesweeper;
 
+import java.util.Random;
+
 
 /**
  *
@@ -13,24 +15,25 @@ public class Play extends javax.swing.JFrame {
 
     /**
      * Creates new form Play
-     */
-    
-    Tile[][] tileGrid = new Tile[6][6];
+     */    
     
     
-   
-    //tile not button
+    Tile[][] tileGrid;
+    
     public Play() {
         initComponents();
+        
+        this.tileGrid = new Tile[6][6];
         
         for (int x=0; x<6; x++){
             for(int y=0; y<6; y++){
                 Tile point = new Tile();                      
                 tileGrid[x][y] = point;
                 jPanel2.add(tileGrid[x][y].button());
+
             }
         }
-               
+        setMines();
     }
 
     /**
@@ -121,8 +124,55 @@ public class Play extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Play().setVisible(true);
+                                               
+                
             }
         });
+    }
+    
+    public void setMines(){
+        Random rand = new Random();                
+        int a = 0;
+        int numMine = 8;
+        int[][] bad = new int[numMine][2];
+        boolean diff;
+
+        while (a<numMine){
+            diff = true;
+            int valX = rand.nextInt(6);
+            int valY = rand.nextInt(6);
+            for(int[] item: bad){
+                if (item[0]==valX && item[1]==valY)
+                    diff = false;
+            }
+            if (diff){
+                bad[a][0] = valX;
+                bad[a][1] = valY;
+                tileGrid[valY][valX].setType();
+                a++;
+                
+                if (valY!=0){
+                    tileGrid[valY-1][valX].addNearbyMine();
+                    if (valX!=0)
+                        tileGrid[valY-1][valX-1].addNearbyMine();
+                    if (valX!=5)
+                        tileGrid[valY-1][valX+1].addNearbyMine();
+                }
+                
+                if (valY!=5){
+                    tileGrid[valY+1][valX].addNearbyMine();
+                    if (valX!=0)
+                        tileGrid[valY+1][valX-1].addNearbyMine();
+                    if (valX!=5)
+                        tileGrid[valY+1][valX+1].addNearbyMine();
+                }
+                
+                if (valX!=0)
+                    tileGrid[valY][valX-1].addNearbyMine();
+                if (valX!=5)
+                    tileGrid[valY][valX+1].addNearbyMine();
+            }
+        }                
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
