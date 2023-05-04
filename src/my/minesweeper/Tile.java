@@ -26,7 +26,7 @@ public class Tile{
         remaining = 28;
     }
      
-    public JButton button(){
+    public JButton buttonListen(){
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if (mine){
