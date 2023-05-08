@@ -36,7 +36,7 @@ public class Tile{
                 
                 else if(remaining==1){
                     button.setText(Integer.toString(nearbyMines));
-                    frame.showMessage("Congrats!");
+                    frame.showMessage("Congrats! You won the game!");
                     frame.dispose();
                 }
                 
