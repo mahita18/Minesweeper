@@ -54,9 +54,9 @@ public class Instruction extends javax.swing.JFrame {
         instructionText.setEditable(false);
         instructionText.setBackground(new java.awt.Color(204, 204, 255));
         instructionText.setColumns(20);
-        instructionText.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        instructionText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         instructionText.setRows(5);
-        instructionText.setText("Enter a coordinate to uncover a tile.\nThere are two types of tiles; normal and bad.\n\nIf you uncover a normal tile, it will reveal how many bad tiles are surrounding it.\nIf you uncover a bad tile, you will lose!\n\nWin the game by uncovering ALL the normal tiles!");
+        instructionText.setText("Click a tile to uncover what is behind it.\n\nIf you uncover a normal tile, it will reveal how many mines are\nsurrounding it. If you uncover a mine, you will lose!\n\nWin the game by uncovering ALL the normal tiles!");
         instructionText.setBorder(null);
         jScrollPane1.setViewportView(instructionText);
 
@@ -82,8 +82,8 @@ public class Instruction extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(instructionTitle)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
