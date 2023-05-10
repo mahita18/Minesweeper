@@ -16,18 +16,19 @@ public class Play extends javax.swing.JFrame {
     /**
      * Creates new form Play
      */    
-    
+    int numOfMine;
     
     Tile[][] tileGrid;
     
-    public Play() {
+    public Play(int num) {
         initComponents();
+        numOfMine = num;
         
         this.tileGrid = new Tile[6][6];
         
         for (int x=0; x<6; x++){
             for(int y=0; y<6; y++){
-                Tile point = new Tile(this);                      
+                Tile point = new Tile(numOfMine, this);                      
                 tileGrid[x][y] = point;
                 gridPanel.add(tileGrid[x][y].buttonListen());
 
@@ -56,6 +57,7 @@ public class Play extends javax.swing.JFrame {
         dialogMessage.setPreferredSize(new java.awt.Dimension(290, 165));
 
         messagePanel.setBackground(new java.awt.Color(204, 204, 255));
+        messagePanel.setMinimumSize(new java.awt.Dimension(10, 10));
 
         javax.swing.GroupLayout messagePanelLayout = new javax.swing.GroupLayout(messagePanel);
         messagePanel.setLayout(messagePanelLayout);
@@ -69,9 +71,9 @@ public class Play extends javax.swing.JFrame {
         messagePanelLayout.setVerticalGroup(
             messagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(messagePanelLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(46, 46, 46)
                 .addComponent(messageLabel)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout dialogMessageLayout = new javax.swing.GroupLayout(dialogMessage.getContentPane());
@@ -165,9 +167,7 @@ public class Play extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Play().setVisible(true);
-                                               
+            public void run() {                                               
                 
             }
         });
@@ -176,7 +176,7 @@ public class Play extends javax.swing.JFrame {
     public void setMines(){
         Random rand = new Random();                
         int a = 0;
-        int numMine = 8;
+        int numMine = numOfMine;
         int[][] bad = new int[numMine][2];
         boolean diff;
 

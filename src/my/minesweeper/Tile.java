@@ -18,12 +18,12 @@ public class Tile{
     Play frame;
     static int remaining;
     
-    public Tile(Play window){
+    public Tile(int mineNum, Play window){
         frame = window;
         nearbyMines=0;
         button = new JButton();
         mine = false;
-        remaining = 28;
+        remaining = 36-mineNum;
     }
      
     public JButton buttonListen(){
@@ -44,7 +44,7 @@ public class Tile{
                     button.setText(Integer.toString(nearbyMines));
                     button.setEnabled(false);
                     remaining--;
-                    System.out.println(remaining);
+                    
                 }
             }
         });
