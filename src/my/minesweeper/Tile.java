@@ -28,18 +28,20 @@ public class Tile{
      
     public JButton buttonListen(){
         button.addActionListener(new ActionListener(){
+            //when user pressed the tile
             public void actionPerformed(ActionEvent e){
+                //tile is a mine
                 if (mine){
                     frame.showMessage("Sorry! You uncovered a mine!");
                     frame.dispose();
                 }
-                
+                //tile is the last remaining normal tile
                 else if(remaining==1){
                     button.setText(Integer.toString(nearbyMines));
                     frame.showMessage("Congrats! You won the game!");
                     frame.dispose();
                 }
-                
+                //tile is normal, but not the last one
                 else{
                     button.setText(Integer.toString(nearbyMines));
                     button.setEnabled(false);
@@ -55,8 +57,7 @@ public class Tile{
         nearbyMines++;
     }
     
-    public void setType(){
-        
+    public void setType(){       
         mine = true;
     }
     

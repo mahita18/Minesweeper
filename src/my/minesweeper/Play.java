@@ -26,6 +26,7 @@ public class Play extends javax.swing.JFrame {
         
         this.tileGrid = new Tile[6][6];
         
+        //creating each tile for the grid
         for (int x=0; x<6; x++){
             for(int y=0; y<6; y++){
                 Tile point = new Tile(numOfMine, this);                      
@@ -182,8 +183,11 @@ public class Play extends javax.swing.JFrame {
 
         while (a<numMine){
             diff = true;
+            //create random coordinate
             int valX = rand.nextInt(6);
             int valY = rand.nextInt(6);
+            
+            //check if the created coordinate already has a mine
             for(int[] item: bad){
                 if (item[0]==valX && item[1]==valY)
                     diff = false;
@@ -194,6 +198,7 @@ public class Play extends javax.swing.JFrame {
                 tileGrid[valY][valX].setType();
                 a++;
                 
+                //updating surrounding tiles
                 if (valY!=0){
                     tileGrid[valY-1][valX].addNearbyMine();
                     if (valX!=0)
@@ -218,6 +223,7 @@ public class Play extends javax.swing.JFrame {
         }                
     }
     
+    //win or lose message
     public void showMessage(String text){
         messageLabel.setText(text);
         dialogMessage.setVisible(true);
