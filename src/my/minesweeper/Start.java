@@ -27,11 +27,11 @@ public class Start extends javax.swing.JFrame {
     private void initComponents() {
 
         getNum = new javax.swing.JFrame();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        getNumPanel = new javax.swing.JPanel();
+        question = new javax.swing.JLabel();
+        getNumInput = new javax.swing.JTextField();
+        getNumButton = new javax.swing.JButton();
+        getNumErrorText = new javax.swing.JLabel();
         startPanel = new javax.swing.JPanel();
         close = new javax.swing.JButton();
         openInstructions = new javax.swing.JButton();
@@ -42,62 +42,62 @@ public class Start extends javax.swing.JFrame {
         getNum.setMinimumSize(new java.awt.Dimension(510, 250));
         getNum.setPreferredSize(new java.awt.Dimension(510, 230));
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getNumPanel.setBackground(new java.awt.Color(204, 204, 255));
+        getNumPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jLabel2.setText("How many mines would you like to have? (6 x 6 grid)");
+        question.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        question.setText("How many mines would you like to have? (6 x 6 grid)");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        getNumInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                getNumInputActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setForeground(new java.awt.Color(0, 102, 0));
-        jButton1.setText("Start");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        getNumButton.setBackground(new java.awt.Color(204, 255, 204));
+        getNumButton.setForeground(new java.awt.Color(0, 102, 0));
+        getNumButton.setText("Start");
+        getNumButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getNumButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                getNumButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getNumErrorText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout getNumPanelLayout = new javax.swing.GroupLayout(getNumPanel);
+        getNumPanel.setLayout(getNumPanelLayout);
+        getNumPanelLayout.setHorizontalGroup(
+            getNumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getNumPanelLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jLabel2)
+                .addComponent(question)
                 .addContainerGap(46, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, getNumPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(getNumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, getNumPanelLayout.createSequentialGroup()
+                        .addComponent(getNumButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, getNumPanelLayout.createSequentialGroup()
+                        .addComponent(getNumInput, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(204, 204, 204))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, getNumPanelLayout.createSequentialGroup()
+                        .addComponent(getNumErrorText, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100))))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        getNumPanelLayout.setVerticalGroup(
+            getNumPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(getNumPanelLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jLabel2)
+                .addComponent(question)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(getNumInput, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
+                .addComponent(getNumErrorText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(getNumButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
 
@@ -107,14 +107,14 @@ public class Start extends javax.swing.JFrame {
             getNumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(getNumLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(getNumPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         getNumLayout.setVerticalGroup(
             getNumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(getNumLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(getNumPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
@@ -221,14 +221,14 @@ public class Start extends javax.swing.JFrame {
         howTo.setVisible(true);
     }//GEN-LAST:event_openInstructionsActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void getNumInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getNumInputActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_getNumInputActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+    private void getNumButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getNumButtonActionPerformed
+        // user inputs number of mines
         try{
-            int input = Integer.parseInt(jTextField1.getText());
+            int input = Integer.parseInt(getNumInput.getText());
             if (input<1)
                 throw new IllegalArgumentException("There must be at least 1 mine!");
             else if (input>=36)
@@ -239,13 +239,13 @@ public class Start extends javax.swing.JFrame {
             game.setVisible(true);
         }
         catch(NumberFormatException e){
-            jLabel1.setText("Must be an integer!");
+            getNumErrorText.setText("Must be an integer!");
         }
         catch(IllegalArgumentException e1){
-            jLabel1.setText(e1.getMessage());
+            getNumErrorText.setText(e1.getMessage());
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_getNumButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,13 +286,13 @@ public class Start extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton close;
     private javax.swing.JFrame getNum;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton getNumButton;
+    private javax.swing.JLabel getNumErrorText;
+    private javax.swing.JTextField getNumInput;
+    private javax.swing.JPanel getNumPanel;
     private javax.swing.JButton openGame;
     private javax.swing.JButton openInstructions;
+    private javax.swing.JLabel question;
     private javax.swing.JPanel startPanel;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
